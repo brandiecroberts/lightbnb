@@ -13,6 +13,7 @@ function logOut() {
 }
 
 function logIn(data) {
+  console.log(data)
   return $.ajax({
     method: "POST",
     url: "/users/login",

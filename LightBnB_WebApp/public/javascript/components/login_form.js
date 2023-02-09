@@ -22,11 +22,12 @@ $(() => {
 
   $logInForm.on('submit', function(event) {
     event.preventDefault();
+    console.log('login submitted');
 
     const data = $(this).serialize();
     logIn(data)
       .then(json => {
-        console.log(json);
+        console.log('json', json);
         if (!json.user) {
           views_manager.show('error', 'Failed to login');
           return;
